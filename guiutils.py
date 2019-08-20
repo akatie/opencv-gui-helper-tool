@@ -1,7 +1,9 @@
+from __future__ import print_function
+from builtins import object
 import cv2
 
 
-class EdgeFinder:
+class EdgeFinder(object):
     def __init__(self, image, filter_size=1, threshold1=0, threshold2=0):
         self.image = image
         self._filter_size = filter_size
@@ -29,7 +31,7 @@ class EdgeFinder:
 
         self._render()
 
-        print "Adjust the parameters as desired.  Hit any key to close."
+        print("Adjust the parameters as desired.  Hit any key to close.")
 
         cv2.waitKey(0)
 

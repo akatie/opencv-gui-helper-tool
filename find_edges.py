@@ -2,6 +2,7 @@
 How to run:
 python find_edges.py <image path>
 """
+from __future__ import print_function
 
 import argparse
 import cv2
@@ -22,10 +23,10 @@ def main():
 
     edge_finder = EdgeFinder(img, filter_size=13, threshold1=28, threshold2=115)
 
-    print "Edge parameters:"
-    print "GaussianBlur Filter Size: %f" % edge_finder.filterSize()
-    print "Threshold1: %f" % edge_finder.threshold1()
-    print "Threshold2: %f" % edge_finder.threshold2()
+    print("Edge parameters:")
+    print("GaussianBlur Filter Size: %f" % edge_finder.filterSize())
+    print("Threshold1: %f" % edge_finder.threshold1())
+    print("Threshold2: %f" % edge_finder.threshold2())
 
     (head, tail) = os.path.split(args.filename)
 
