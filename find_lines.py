@@ -1,6 +1,6 @@
 """
 How to run:
-python find_edges.py <image path>
+python find_lines.py <image path>
 """
 from __future__ import print_function
 
@@ -8,7 +8,7 @@ import argparse
 import cv2
 import os
 
-from guiutils import EdgeFinder
+from guiutils import LineFinder
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
     # cv2.resizeWindow('input', 1378, 598)
     # cv2.imshow('input', img)
 
-    edge_finder = EdgeFinder(img, filter_size=13, threshold1=28, threshold2=115)
+    edge_finder = LineFinder(img, filter_size=13, threshold1=28, threshold2=115)
 
     print("Edge parameters:")
     print("GaussianBlur Filter Size: %f" % edge_finder.filterSize())
